@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>  
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Get a FizzBuzz Result!</h1>
+        <div class="container">
+            <p>Type a number:</p>
+            <input type="number">
+            <button onclick="calc()">Click here!</button>
+        </div>
+        <p id="output"></p>
+
+
+        <script>
+            const input = document.querySelector("input");
+            function calc(){
+                const number = input.value;
+                if(number===0||isNaN(number)){
+                    document.getElementById("output").innerHTML="Invalid Input";
+                }
+                if(number%3===0){
+                    document.getElementById("output").innerHTML="Fizz";
+                }
+                if(number%5===0){
+                    document.getElementById("output").innerHTML="Buzz";
+                }
+                if(number%5===0&&number%3===0){
+                    document.getElementById("output").innerHTML="FizzBuzz";
+                }
+                if(!(number%5===0&&number%3===0)){
+                    document.getElementById("output").innerHTML=number;
+                }
+            }                           
+            
+
+        </script>
+
+
+
+    </body>
+</html>
